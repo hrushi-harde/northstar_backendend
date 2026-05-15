@@ -7,7 +7,6 @@ function validate(schema) {
     for (const [field, rules] of Object.entries(schema)) {
       let value = req.body[field];
 
-      // Trim strings before validation
       if (typeof value === 'string') {
         value = value.trim();
         req.body[field] = value;
